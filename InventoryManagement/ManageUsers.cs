@@ -18,6 +18,7 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ioannis Saltidis\Documents\Inventorydb.mdf;Integrated Security=True;Connect Timeout=30"); 
 
         private void label1_Click(object sender, EventArgs e)
