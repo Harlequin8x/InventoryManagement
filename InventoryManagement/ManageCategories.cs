@@ -70,7 +70,50 @@ namespace InventoryManagement
 
         private void CustomEdit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("update CategoriesTbl set CatName='" + CatNameTb.Text + "' where CatId='" + CatIdTb.Text + "'", Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Category Successfully Updated");
+                Con.Close();
+                populate();
 
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void CustomDelete_Click(object sender, EventArgs e)
+        {
+            if (CatIdTb.Text == "")
+            {
+                MessageBox.Show("Enter the Category ID");
+
+            }
+            else
+            {
+                Con.Open();
+                string myquery = "delete from CategoriesTbl where CatId= '" + CatIdTb.Text + "';";
+                SqlCommand cmd = new SqlCommand(myquery, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Category Successfully Deleted");
+                Con.Close();
+                populate();
+            }
+            }
+
+        private void ManageCategories_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void CategoriesGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CatIdTb.Text = CategoriesGv.SelectedRows[0].Cells[0].Value.ToString();
+            CatNameTb.Text = CategoriesGv.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
-}
+    }

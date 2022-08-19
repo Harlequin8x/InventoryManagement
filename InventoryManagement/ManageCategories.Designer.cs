@@ -44,6 +44,7 @@
             this.CatIdTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.CategoriesGv = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriesGv)).BeginInit();
             this.SuspendLayout();
@@ -132,6 +133,7 @@
             this.CustomDelete.TabIndex = 24;
             this.CustomDelete.Text = "Delete";
             this.CustomDelete.UseVisualStyleBackColor = false;
+            this.CustomDelete.Click += new System.EventHandler(this.CustomDelete_Click);
             // 
             // CustomEdit
             // 
@@ -272,6 +274,15 @@
             this.CategoriesGv.ThemeStyle.RowsStyle.Height = 22;
             this.CategoriesGv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CategoriesGv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CategoriesGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CategoriesGv_CellContentClick);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel3.Location = new System.Drawing.Point(50, 472);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.TabIndex = 30;
             // 
             // ManageCategories
             // 
@@ -279,6 +290,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1124, 633);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CategoriesGv);
             this.Controls.Add(this.CatNameTb);
@@ -292,6 +304,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCategories";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ManageCategories_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriesGv)).EndInit();
@@ -315,5 +328,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox CatIdTb;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView CategoriesGv;
+        private System.Windows.Forms.Panel panel3;
     }
 }
