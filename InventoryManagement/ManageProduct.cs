@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace InventoryManagement
 {
     public partial class ManageProduct : Form
@@ -52,8 +51,32 @@ namespace InventoryManagement
 
         private void ProductsGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ProdIdTb.Text = ProductsGv.SelectedRows[0].Cells[0].Value.ToString();
+            ProdNameTb.Text = ProductsGv.SelectedRows[0].Cells[1].Value.ToString();
+            QtyTb.Text = ProductsGv.SelectedRows[0].Cells[2].Value.ToString();
+            PriceTb.Text = ProductsGv.SelectedRows[0].Cells[3].Value.ToString();
+            DescriptionTb.Text = ProductsGv.SelectedRows[0].Cells[4].Value.ToString();
+            CatCombo.SelectedValue = ProductsGv.SelectedRows[0].Cells[5].Value.ToString();
         }
+
+        private void CustomEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("update ProductTbl set ProdName='" + ProdNameTb.Text + "', ProdQty=" + QtyTb.Text + ", ProdPrice=" + PriceTb.Text + "', ProdDesc = '" + DescriptionTb.Text + "', ProdCat = " + CatCombo.SelectedValue.ToString() + "'  where ProdId=" + ProdIdTb.Text + "", Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Product Successfully Updated");
+                Con.Close();
+                populate();
+            }
+
+            catch
+            {
+                
+            }
+        }
+
 
         private void ManageProduct_Load(object sender, EventArgs e)
         {
@@ -127,5 +150,7 @@ namespace InventoryManagement
                 populate();
             }
         }
+
+
     }
 }
