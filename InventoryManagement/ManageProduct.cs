@@ -22,7 +22,7 @@ namespace InventoryManagement
 
         void fillcategory()
         {
-            string query = "select * from CategoriesTbl";
+            string query = "select * from ProductTbl";
             SqlCommand cmd = new SqlCommand(query, Con);
             SqlDataReader rdr;
 
@@ -30,10 +30,10 @@ namespace InventoryManagement
             {
                 Con.Open();
                 DataTable dt = new DataTable();
-                dt.Columns.Add("CatName", typeof(string));
+                dt.Columns.Add("ProdName", typeof(string));
                 rdr = cmd.ExecuteReader();
                 dt.Load(rdr);
-                CatCombo.ValueMember = "CatName";
+                CatCombo.ValueMember = "ProdName";
                 CatCombo.DataSource = dt;
                 Con.Close();
             }
@@ -64,7 +64,7 @@ namespace InventoryManagement
             try
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("update ProductTbl set ProdName='" + ProdNameTb.Text + "', ProdQty=" + QtyTb.Text + ", ProdPrice=" + PriceTb.Text + "', ProdDesc = '" + DescriptionTb.Text + "', ProdCat = " + CatCombo.SelectedValue.ToString() + "'  where ProdId=" + ProdIdTb.Text + "", Con);
+                SqlCommand cmd = new SqlCommand("update ProductTbl set ProdName=" + ProdNameTb.Text + "', ProdQty=" + QtyTb.Text + ", ProdPrice=" + PriceTb.Text + ", ProdDesc=" + DescriptionTb.Text + "', ProdCat=" + CatCombo.SelectedValue.ToString() + "'  where ProdId=" + ProdIdTb.Text + "", Con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product Successfully Updated");
                 Con.Close();
