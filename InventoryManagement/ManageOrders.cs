@@ -17,34 +17,39 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+                
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ioannis Saltidis\Documents\Inventorydb.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         int sum = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             if (QtyTb.Text == "")
-                MessageBox.Show("Enter the Quanitity of Products");
+                MessageBox.Show("Enter the Quantity of Products");
             else if (flag == 0)
                 MessageBox.Show("Select the Product");
             else
             {
-                
+                DataTable table = new DataTable();
                 num = num + 1;
                 qty = Convert.ToInt32(QtyTb.Text);
                 totprice = qty * uprice;
-                DataTable table = new DataTable();
                 table.Columns.Add("Num", typeof(int));
                 table.Columns.Add("Product", typeof(string));
-                table.Columns.Add("qty", typeof(int));
-                table.Columns.Add("uprice", typeof(int));
-                table.Columns.Add("totprice", typeof(int));
+                table.Columns.Add("Qty", typeof(int));
+                table.Columns.Add("Uprice", typeof(int));
+                table.Columns.Add("TotPrice", typeof(int));
                 table.Rows.Add(num, product, qty, uprice, totprice);
                 OrderGv.DataSource = table;
-                flag = 0;
+                flag = 0;               
+
+
             }
             sum = sum + totprice;
+            
         }
+
         void populate()
         {
             try
@@ -106,6 +111,7 @@ namespace InventoryManagement
                 da.Fill(ds);
                 OrderGv.DataSource = ds.Tables[0];
                 Con.Close();
+                
             }
             catch
             {
@@ -145,10 +151,10 @@ namespace InventoryManagement
 
         private void ManageOrders_Load(object sender, EventArgs e)
         {
-            populate();
             populateproducts();
             fillcategory();
             populateorders();
+            populate();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -185,6 +191,7 @@ namespace InventoryManagement
         
         private void OrderGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+         
             
         }
 
