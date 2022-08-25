@@ -37,94 +37,39 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ManageUsers_Load = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CustomersGv = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.OrderId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.CustId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.OrderId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.ManageUsers_Load = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SearchCombo = new System.Windows.Forms.ComboBox();
             this.ProductGv = new Guna.UI2.WinForms.Guna2DataGridView();
             this.QtyTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.OrderGv = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CustName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.panel1.SuspendLayout();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ManageUsers_Load);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1124, 100);
-            this.panel1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1089, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // ManageUsers_Load
-            // 
-            this.ManageUsers_Load.AutoSize = true;
-            this.ManageUsers_Load.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageUsers_Load.ForeColor = System.Drawing.Color.White;
-            this.ManageUsers_Load.Location = new System.Drawing.Point(447, 56);
-            this.ManageUsers_Load.Name = "ManageUsers_Load";
-            this.ManageUsers_Load.Size = new System.Drawing.Size(192, 24);
-            this.ManageUsers_Load.TabIndex = 1;
-            this.ManageUsers_Load.Text = "Manage Products";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(320, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(457, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "INVENTORY MANAGEMENT SYSTEM";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 614);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1124, 19);
-            this.panel2.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(131, 108);
+            this.label2.Location = new System.Drawing.Point(122, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 28);
-            this.label2.TabIndex = 24;
+            this.label2.TabIndex = 17;
             this.label2.Text = "CUSTOMER LIST";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -156,12 +101,12 @@
             this.CustomersGv.DefaultCellStyle = dataGridViewCellStyle3;
             this.CustomersGv.EnableHeadersVisualStyles = false;
             this.CustomersGv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.CustomersGv.Location = new System.Drawing.Point(17, 139);
+            this.CustomersGv.Location = new System.Drawing.Point(25, 138);
             this.CustomersGv.Name = "CustomersGv";
             this.CustomersGv.RowHeadersVisible = false;
             this.CustomersGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CustomersGv.Size = new System.Drawing.Size(407, 234);
-            this.CustomersGv.TabIndex = 25;
+            this.CustomersGv.Size = new System.Drawing.Size(392, 191);
+            this.CustomersGv.TabIndex = 16;
             this.CustomersGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.CustomersGv.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.CustomersGv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -185,6 +130,26 @@
             this.CustomersGv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CustomersGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersGv_CellContentClick);
             // 
+            // CustId
+            // 
+            this.CustId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CustId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustId.ForeColor = System.Drawing.Color.Crimson;
+            this.CustId.HintForeColor = System.Drawing.Color.Empty;
+            this.CustId.HintText = "";
+            this.CustId.isPassword = false;
+            this.CustId.LineFocusedColor = System.Drawing.Color.BlueViolet;
+            this.CustId.LineIdleColor = System.Drawing.Color.DarkViolet;
+            this.CustId.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
+            this.CustId.LineThickness = 4;
+            this.CustId.Location = new System.Drawing.Point(25, 417);
+            this.CustId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CustId.Name = "CustId";
+            this.CustId.Size = new System.Drawing.Size(222, 42);
+            this.CustId.TabIndex = 31;
+            this.CustId.Text = "CustomerId";
+            this.CustId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // OrderId
             // 
             this.OrderId.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -197,35 +162,13 @@
             this.OrderId.LineIdleColor = System.Drawing.Color.DarkViolet;
             this.OrderId.LineMouseHoverColor = System.Drawing.Color.DarkViolet;
             this.OrderId.LineThickness = 4;
-            this.OrderId.Location = new System.Drawing.Point(17, 381);
+            this.OrderId.Location = new System.Drawing.Point(25, 365);
             this.OrderId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.OrderId.Name = "OrderId";
             this.OrderId.Size = new System.Drawing.Size(222, 42);
-            this.OrderId.TabIndex = 29;
+            this.OrderId.TabIndex = 30;
             this.OrderId.Text = "OrderId";
             this.OrderId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.OrderId.OnValueChanged += new System.EventHandler(this.ProdIdTb_OnValueChanged);
-            // 
-            // CustId
-            // 
-            this.CustId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustId.ForeColor = System.Drawing.Color.Crimson;
-            this.CustId.HintForeColor = System.Drawing.Color.Empty;
-            this.CustId.HintText = "";
-            this.CustId.isPassword = false;
-            this.CustId.LineFocusedColor = System.Drawing.Color.BlueViolet;
-            this.CustId.LineIdleColor = System.Drawing.Color.DarkViolet;
-            this.CustId.LineMouseHoverColor = System.Drawing.Color.DarkViolet;
-            this.CustId.LineThickness = 4;
-            this.CustId.Location = new System.Drawing.Point(17, 433);
-            this.CustId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.CustId.Name = "CustId";
-            this.CustId.Size = new System.Drawing.Size(222, 42);
-            this.CustId.TabIndex = 30;
-            this.CustId.Text = "CustomerId";
-            this.CustId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CustId.OnValueChanged += new System.EventHandler(this.CustId_OnValueChanged);
             // 
             // guna2DateTimePicker1
             // 
@@ -234,34 +177,90 @@
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(14, 563);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(25, 547);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(261, 36);
-            this.guna2DateTimePicker1.TabIndex = 31;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2022, 8, 23, 13, 47, 45, 446);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(236, 36);
+            this.guna2DateTimePicker1.TabIndex = 32;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2022, 8, 25, 8, 56, 18, 338);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Location = new System.Drawing.Point(20, 516);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 28);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "CUSTOMER LIST";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 614);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1124, 19);
+            this.panel2.TabIndex = 36;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(82, 537);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(320, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 23);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Order Date";
+            this.label4.Size = new System.Drawing.Size(457, 33);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "INVENTORY MANAGEMENT SYSTEM";
+            // 
+            // ManageUsers_Load
+            // 
+            this.ManageUsers_Load.AutoSize = true;
+            this.ManageUsers_Load.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageUsers_Load.ForeColor = System.Drawing.Color.White;
+            this.ManageUsers_Load.Location = new System.Drawing.Point(447, 56);
+            this.ManageUsers_Load.Name = "ManageUsers_Load";
+            this.ManageUsers_Load.Size = new System.Drawing.Size(192, 24);
+            this.ManageUsers_Load.TabIndex = 1;
+            this.ManageUsers_Load.Text = "Manage Products";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1089, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.ManageUsers_Load);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1124, 100);
+            this.panel1.TabIndex = 37;
             // 
             // SearchCombo
             // 
             this.SearchCombo.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.SearchCombo.ForeColor = System.Drawing.Color.Crimson;
             this.SearchCombo.FormattingEnabled = true;
-            this.SearchCombo.Location = new System.Drawing.Point(661, 104);
+            this.SearchCombo.Location = new System.Drawing.Point(698, 106);
             this.SearchCombo.Name = "SearchCombo";
-            this.SearchCombo.Size = new System.Drawing.Size(223, 29);
-            this.SearchCombo.TabIndex = 35;
+            this.SearchCombo.Size = new System.Drawing.Size(160, 29);
+            this.SearchCombo.TabIndex = 39;
             this.SearchCombo.Text = "Select Category";
             this.SearchCombo.SelectedIndexChanged += new System.EventHandler(this.SearchCombo_SelectedIndexChanged);
             this.SearchCombo.SelectionChangeCommitted += new System.EventHandler(this.SearchCombo_SelectionChangeCommitted);
@@ -294,12 +293,12 @@
             this.ProductGv.DefaultCellStyle = dataGridViewCellStyle6;
             this.ProductGv.EnableHeadersVisualStyles = false;
             this.ProductGv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProductGv.Location = new System.Drawing.Point(451, 139);
+            this.ProductGv.Location = new System.Drawing.Point(451, 138);
             this.ProductGv.Name = "ProductGv";
             this.ProductGv.RowHeadersVisible = false;
             this.ProductGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductGv.Size = new System.Drawing.Size(642, 234);
-            this.ProductGv.TabIndex = 36;
+            this.ProductGv.Size = new System.Drawing.Size(651, 191);
+            this.ProductGv.TabIndex = 38;
             this.ProductGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProductGv.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.ProductGv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -321,7 +320,7 @@
             this.ProductGv.ThemeStyle.RowsStyle.Height = 22;
             this.ProductGv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ProductGv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ProductGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductGv_CellContentClick_1);
+            this.ProductGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductGv_CellContentClick);
             // 
             // QtyTb
             // 
@@ -335,11 +334,11 @@
             this.QtyTb.LineIdleColor = System.Drawing.Color.DarkViolet;
             this.QtyTb.LineMouseHoverColor = System.Drawing.Color.DarkViolet;
             this.QtyTb.LineThickness = 4;
-            this.QtyTb.Location = new System.Drawing.Point(574, 381);
+            this.QtyTb.Location = new System.Drawing.Point(645, 335);
             this.QtyTb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.QtyTb.Name = "QtyTb";
             this.QtyTb.Size = new System.Drawing.Size(222, 42);
-            this.QtyTb.TabIndex = 37;
+            this.QtyTb.TabIndex = 40;
             this.QtyTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label5
@@ -347,11 +346,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(456, 395);
+            this.label5.Location = new System.Drawing.Point(527, 349);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 28);
-            this.label5.TabIndex = 38;
+            this.label5.TabIndex = 41;
             this.label5.Text = "Quantity";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
@@ -361,11 +361,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(796, 390);
+            this.button1.Location = new System.Drawing.Point(867, 344);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 33);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Add To Order";
+            this.button1.Size = new System.Drawing.Size(130, 33);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Add to Order";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -397,12 +397,12 @@
             this.OrderGv.DefaultCellStyle = dataGridViewCellStyle9;
             this.OrderGv.EnableHeadersVisualStyles = false;
             this.OrderGv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.OrderGv.Location = new System.Drawing.Point(451, 433);
+            this.OrderGv.Location = new System.Drawing.Point(451, 402);
             this.OrderGv.Name = "OrderGv";
             this.OrderGv.RowHeadersVisible = false;
             this.OrderGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderGv.Size = new System.Drawing.Size(642, 175);
-            this.OrderGv.TabIndex = 40;
+            this.OrderGv.Size = new System.Drawing.Size(651, 195);
+            this.OrderGv.TabIndex = 43;
             this.OrderGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.OrderGv.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.OrderGv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -426,53 +426,53 @@
             this.OrderGv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.OrderGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderGv_CellContentClick);
             // 
-            // CustName
+            // bunifuMaterialTextbox1
             // 
-            this.CustName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustName.ForeColor = System.Drawing.Color.Crimson;
-            this.CustName.HintForeColor = System.Drawing.Color.Empty;
-            this.CustName.HintText = "";
-            this.CustName.isPassword = false;
-            this.CustName.LineFocusedColor = System.Drawing.Color.BlueViolet;
-            this.CustName.LineIdleColor = System.Drawing.Color.DarkViolet;
-            this.CustName.LineMouseHoverColor = System.Drawing.Color.DarkViolet;
-            this.CustName.LineThickness = 4;
-            this.CustName.Location = new System.Drawing.Point(17, 485);
-            this.CustName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.CustName.Name = "CustName";
-            this.CustName.Size = new System.Drawing.Size(222, 42);
-            this.CustName.TabIndex = 41;
-            this.CustName.Text = "CustomerName";
-            this.CustName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Crimson;
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox1.HintText = "";
+            this.bunifuMaterialTextbox1.isPassword = false;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.BlueViolet;
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.DarkViolet;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
+            this.bunifuMaterialTextbox1.LineThickness = 4;
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(25, 469);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(222, 42);
+            this.bunifuMaterialTextbox1.TabIndex = 44;
+            this.bunifuMaterialTextbox1.Text = "CustomerName";
+            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 633);
-            this.Controls.Add(this.CustName);
+            this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.OrderGv);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.QtyTb);
-            this.Controls.Add(this.ProductGv);
             this.Controls.Add(this.SearchCombo);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ProductGv);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.CustId);
             this.Controls.Add(this.OrderId);
-            this.Controls.Add(this.CustomersGv);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.CustomersGv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageOrders";
             this.Text = "ManageOrders";
             this.Load += new System.EventHandler(this.ManageOrders_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGv)).EndInit();
             this.ResumeLayout(false);
@@ -482,23 +482,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label ManageUsers_Load;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView CustomersGv;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox OrderId;
         private Bunifu.Framework.UI.BunifuMaterialTextbox CustId;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox OrderId;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ManageUsers_Load;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox SearchCombo;
         private Guna.UI2.WinForms.Guna2DataGridView ProductGv;
         private Bunifu.Framework.UI.BunifuMaterialTextbox QtyTb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2DataGridView OrderGv;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox CustName;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
     }
 }

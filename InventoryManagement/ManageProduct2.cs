@@ -183,5 +183,10 @@ namespace InventoryManagement
         {
             populate();
         }
+
+        private void SearchCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
