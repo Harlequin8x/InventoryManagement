@@ -20,6 +20,31 @@ namespace InventoryManagement
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ioannis Saltidis\Documents\Inventorydb.mdf;Integrated Security=True;Connect Timeout=30");
 
+        int sum = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (QtyTb.Text == "")
+                MessageBox.Show("Enter the Quanitity of Products");
+            else if (flag == 0)
+                MessageBox.Show("Select the Product");
+            else
+            {
+                
+                num = num + 1;
+                qty = Convert.ToInt32(QtyTb.Text);
+                totprice = qty * uprice;
+                DataTable table = new DataTable();
+                table.Columns.Add("Num", typeof(int));
+                table.Columns.Add("Product", typeof(string));
+                table.Columns.Add("qty", typeof(int));
+                table.Columns.Add("uprice", typeof(int));
+                table.Columns.Add("totprice", typeof(int));
+                table.Rows.Add(num, product, qty, uprice, totprice);
+                OrderGv.DataSource = table;
+                flag = 0;
+            }
+            sum = sum + totprice;
+        }
         void populate()
         {
             try
@@ -49,6 +74,7 @@ namespace InventoryManagement
 
         }
 
+        
         void populateproducts()
         {
             try
@@ -60,6 +86,25 @@ namespace InventoryManagement
                 var ds = new DataSet();
                 da.Fill(ds);
                 ProductGv.DataSource = ds.Tables[0];
+                Con.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        void populateorders()
+        {
+            try
+            {
+                Con.Open();
+                string Myquery = "select * from OrderTbl";
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                var ds = new DataSet();
+                da.Fill(ds);
+                OrderGv.DataSource = ds.Tables[0];
                 Con.Close();
             }
             catch
@@ -103,6 +148,7 @@ namespace InventoryManagement
             populate();
             populateproducts();
             fillcategory();
+            populateorders();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -136,29 +182,10 @@ namespace InventoryManagement
             CustId.Text = CustomersGv.SelectedRows[0].Cells[0].Value.ToString();
         }
 
-        int sum = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (QtyTb.Text == "")
-                MessageBox.Show("Enter the Quanitity of Products");
-            else if (flag == 0)
-                MessageBox.Show("Select the Product");
-            else
-            {
-                DataTable table = new DataTable();
-                num = num + 1;
-                qty = Convert.ToInt32(QtyTb.Text);
-                totprice = qty * uprice;
-                table.Rows.Add(num, product, qty, uprice, totprice);
-                OrderGv.DataSource = table;
-                flag = 0;
-            }
-            sum = sum + totprice;
-        }
-
+        
         private void OrderGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            OrderGv.SelectedRows[0].Cells[0].Value.ToString();
+            
         }
 
         private void SearchCombo_SelectionChangeCommitted(object sender, EventArgs e)
