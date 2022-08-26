@@ -55,6 +55,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.OrderGv = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TotAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGv)).BeginInit();
@@ -401,7 +403,7 @@
             this.OrderGv.Name = "OrderGv";
             this.OrderGv.RowHeadersVisible = false;
             this.OrderGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderGv.Size = new System.Drawing.Size(651, 195);
+            this.OrderGv.Size = new System.Drawing.Size(651, 171);
             this.OrderGv.TabIndex = 43;
             this.OrderGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.OrderGv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -446,11 +448,35 @@
             this.bunifuMaterialTextbox1.Text = "CustomerName";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Location = new System.Drawing.Point(593, 576);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 30);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Total Amount";
+            // 
+            // TotAmount
+            // 
+            this.TotAmount.AutoSize = true;
+            this.TotAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TotAmount.Location = new System.Drawing.Point(765, 579);
+            this.TotAmount.Name = "TotAmount";
+            this.TotAmount.Size = new System.Drawing.Size(40, 25);
+            this.TotAmount.TabIndex = 46;
+            this.TotAmount.Text = "Rs";
+            // 
             // ManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 633);
+            this.Controls.Add(this.TotAmount);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.OrderGv);
             this.Controls.Add(this.button1);
@@ -500,5 +526,7 @@
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2DataGridView OrderGv;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TotAmount;
     }
 }

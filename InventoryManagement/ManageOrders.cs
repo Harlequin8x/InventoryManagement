@@ -17,21 +17,38 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
-                
+
+        DataTable table = new DataTable();
+
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ioannis Saltidis\Documents\Inventorydb.mdf;Integrated Security=True;Connect Timeout=30");
 
-
+        
         int sum = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            DataTable table = new DataTable();
+
+            /*DataColumn column;
+            DataRow row;
+            // DataView view;
+
+            column = new DataColumn();
+
+            for (int i = 0; i < 10; i++)
+            {
+                row = table.NewRow();                
+                table.Rows.Add(row);
+            }*/
+
             if (QtyTb.Text == "")
                 MessageBox.Show("Enter the Quantity of Products");
             else if (flag == 0)
                 MessageBox.Show("Select the Product");
+            else if (Convert.ToInt32(QtyTb.Text) > stock)
+                MessageBox.Show("Not enough Stock available");
             else
             {
-                DataTable table = new DataTable();
                 num = num + 1;
                 qty = Convert.ToInt32(QtyTb.Text);
                 totprice = qty * uprice;
@@ -42,11 +59,10 @@ namespace InventoryManagement
                 table.Columns.Add("TotPrice", typeof(int));
                 table.Rows.Add(num, product, qty, uprice, totprice);
                 OrderGv.DataSource = table;
-                flag = 0;               
-
-
+                flag = 0;
             }
             sum = sum + totprice;
+            TotAmount.Text = "Rs" + sum.ToString();
             
         }
 
@@ -55,7 +71,7 @@ namespace InventoryManagement
             try
             {
                 Con.Open();
-                string Myquery = "select * from CustomerTbl";
+                string Myquery = "select * from CustomerTbl";     // CustomerTbl before
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder builder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
@@ -145,16 +161,37 @@ namespace InventoryManagement
             }
         }
 
+        void updateproduct()
+        {
+            Con.Open();
+            int id = Convert.ToInt32(ProductGv.SelectedRows[0].Cells[0].Value.ToString());
+            int newQty = stock - Convert.ToInt32(QtyTb.Text);
+            string query = "update ProductTbl set ProdQty = " + newQty + " where ProdId=" + id + ";";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            cmd.ExecuteNonQuery();
+            Con.Close();
+            populateproducts();
+        }
+
+
         int num = 0;
         int uprice, totprice, qty;
         string product;
 
         private void ManageOrders_Load(object sender, EventArgs e)
         {
+
+            populate();
             populateproducts();
             fillcategory();
-            populateorders();
-            populate();
+            //populateorders();            
+            table.Columns.Add("Num", typeof(int));
+            table.Columns.Add("Product", typeof(int));
+            table.Columns.Add("Quantity", typeof(int));
+            table.Columns.Add("UPrice", typeof(int));
+            table.Columns.Add("TotPrice", typeof(int));
+
+            OrderGv.DataSource = table;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -173,11 +210,12 @@ namespace InventoryManagement
         }
 
         int flag = 0;
-
+        int stock;
         private void ProductGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             product = ProductGv.SelectedRows[0].Cells[1].Value.ToString();
             //qty = Convert.ToInt32(QtyTb.Text);
+            stock = Convert.ToInt32(ProductGv.SelectedRows[0].Cells[2].Value.ToString());
             uprice = Convert.ToInt32(ProductGv.SelectedRows[0].Cells[3].Value.ToString());
             //totprice = qty * uprice;
             flag = 1;
